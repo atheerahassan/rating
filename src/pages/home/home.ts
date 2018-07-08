@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController} from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,24 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
+  }
+
+  createAlert() {
+    this.alertCtrl.create({
+      subTitle:"YOU'VE DONE TRANSACTION WITH KANNA.",
+      message:"RATE YOUR TRANSACTION :",
+      
+
+      // inputs: [
+
+
+
+      // ]
+
+
+    }).present();
   }
 
 }
